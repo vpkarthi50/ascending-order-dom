@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Object-of-Object</title>
+	</head>
+	<body>
+		<input type="number" id="fv" placeholder="Enter a First number">
+		<input type="number" id="sv" placeholder="Enter a Second number">
+		<input type="number" id="tv" placeholder="Enter a Third number">
+		<input type="number" id="fov" placeholder="Enter a Fourth number">
+		<button type="button" id="btn">Click Me</button>
+		<h2 id="display"></h2>
+	<script>
+		
+		let but=document.getElementById("btn");
+		
+		but.addEventListener("click",ascendingFun);
+		
+	function ascendingFun(){
+		var a=document.getElementById("fv").value;
+		var b=document.getElementById("sv").value;
+		var c=document.getElementById("tv").value;
+		var d=document.getElementById("fov").value;
+		
+		if(a<b && a<c && a<d){
+			if(b<c && b<d){
+				if(c<d){
+					document.getElementById("display").innerHTML=a+b+c+d;
+				}
+				else{
+					document.getElementById("display").innerHTML=a+b+d+c;
+				}
+			}
+			else if(c<b && c<d){
+				if(b<d){
+					document.getElementById("display").innerHTML=a+c+b+d;
+				}
+				else{
+					document.getElementById("display").innerHTML=a+c+d+b;
+				}
+			}
+			else if(d<c && d<b){
+				if(b<c){
+					document.getElementById("display").innerHTML=a+d+b+c;
+				}
+				else{
+					document.getElementById("display").innerHTML=a+d+c+b;
+				}
+			}
+		}
+		else if(b<a && b<c && b<d){
+			if(a<c && a<d){
+				if(c<d){
+					document.getElementById("display").innerHTML=b+a+c+d;
+				}
+				else{
+					document.getElementById("display").innerHTML=b+a+d+c;
+				}
+			}
+			else if(c<a && c<d){
+				if(a<d){
+					document.getElementById("display").innerHTML=b+c+a+d;
+				}
+				else{
+					document.getElementById("display").innerHTML=b+c+d+a;
+				}
+			}
+			else if(d<a && d<c){
+				if(a<c){
+					document.getElementById("display").innerHTML=b+d+a+c;
+				}
+				else{
+					document.getElementById("display").innerHTML=b+d+c+a;
+				}
+			}
+		}
+		else if(c<a && c<b && c<d){
+			if(a<c && a<d){
+				if(b<d){
+					document.getElementById("display").innerHTML=c+a+b+d;
+				}
+				else{
+					document.getElementById("display").innerHTML=c+a+d+b;
+				}
+			}
+			else if(b<a && b<d){
+				if(a<d){
+					document.getElementById("display").innerHTML=c+b+a+d;
+				}
+				else{
+					document.getElementById("display").innerHTML=c+b+d+a;
+				}
+			}
+			else if(d<a && d<b){
+				if(a<b){
+					document.getElementById("display").innerHTML=c+d+a+b;
+				}
+				else{
+					document.getElementById("display").innerHTML=c+d+b+a;
+				}
+			}
+		}
+		else if(d<a && d<b && d<c){
+			if(a<b && a<c){
+				if(b<c){
+					document.getElementById("display").innerHTML=d+a+b+c;
+				}
+				else{
+					document.getElementById("display").innerHTML=d+a+c+b;
+				}
+			}
+			else if(b<a && b<d){
+				if(a<c){
+					document.getElementById("display").innerHTML=d+b+a+c;
+				}
+				else{
+					document.getElementById("display").innerHTML=d+b+c+a;
+				}
+			}
+			else if(c<a && c<b){
+				if(a<b){
+					document.getElementById("display").innerHTML=d+c+a+b;
+				}
+				else{
+					document.getElementById("display").innerHTML=d+c+b+a;
+				}
+			}
+		}
+	}
+		
+	</script>
+	</body>
+</html>
